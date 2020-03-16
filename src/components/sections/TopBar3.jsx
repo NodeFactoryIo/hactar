@@ -3,7 +3,6 @@ import { debounce, classList } from "../../Utils";
 import Icon from "@material-ui/core/Icon";
 import Fab from "@material-ui/core/Fab";
 import IconButton from "@material-ui/core/IconButton";
-import { NavLink } from "react-router-dom";
 import ScrollTo from "../common/ScrollTo";
 
 class TopBar3 extends Component {
@@ -52,50 +51,57 @@ class TopBar3 extends Component {
       >
         <div className="container header-container">
           <div className="brand">
-            <img src="./assets/images/logo-full.png" alt="" />
+            <img src="./assets/images/logos/hactar-logo.png" alt="Hactar" />
           </div>
+
           <ul className="navigation">
-            <li>
-              <NavLink to="/">Demos</NavLink>
-            </li>
             <li>
               <ScrollTo to="intro3" onScroll={this.close}>
                 Home
               </ScrollTo>
             </li>
-            
-            <li>
-              <ScrollTo to="service3" onScroll={this.close}>
-                Service
-              </ScrollTo>
-            </li>
+
             <li>
               <ScrollTo to="service5" onScroll={this.close}>
                 Features
               </ScrollTo>
             </li>
+
             <li>
-              <ScrollTo to="pricing1" onScroll={this.close}>
-                Pricing
+              <ScrollTo to="service5" onScroll={this.close}>
+                Getting started
               </ScrollTo>
             </li>
+
+            {/*
+              <li>
+                <ScrollTo to="pricing1" onScroll={this.close}>
+                  Pricing
+                </ScrollTo>
+              </li>
+
+
             <li>
               <ScrollTo to="contact1" onScroll={this.close}>
                 Contact
               </ScrollTo>
             </li>
+            */}
           </ul>
           <div className="m-auto" />
           <Fab
                   variant="extended"
                   size="medium"
                   color="secondary"
-                  aria-label="Buy"
+                  aria-label="Download"
                   className=""
-                >
-                  <Icon className="mr-16">flight_takeoff</Icon>
-                  Sign Up
-                </Fab>
+                  href="https://github.com/NodeFactoryIo/hactar-daemon/releases"
+                  target="_blank"
+
+          >
+            <Icon className="mr-16">cloud_download</Icon>
+            Download
+          </Fab>
           <IconButton
             className="header__toggle"
             onClick={() => {

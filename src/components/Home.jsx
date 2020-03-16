@@ -7,7 +7,7 @@ import Service6 from "./sections/Services6";
 import Service7 from "./sections/Services7";
 import Testimonial3 from "./sections/Testimonial3";
 import Intro3 from "./sections/Intro3";
-import TopBar3 from "./sections/TopBar3";
+import TopBar from "./sections/TopBar3";
 import CallToAction2 from "./sections/CallToAction2";
 import Pricing1 from "./sections/Pricing1";
 import Footer1 from "./sections/Footer1";
@@ -22,7 +22,7 @@ class Home extends Component {
   render() {
     return (
       <div className="landing">
-        <TopBar3/>
+        <TopBar/>
         <Intro3/>
         <Service3 />
         <Service4 />

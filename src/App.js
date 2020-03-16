@@ -9,7 +9,6 @@ import Home from "./components/Home";
 function App() {
   return (
     <MuiThemeProvider theme={Theme}>
-      {/* <Router basename="/react-landing"> */}
       <Router basename="/">
         <Home />
       </Router>
