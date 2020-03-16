@@ -30,19 +30,18 @@ class Intro3 extends Component {
                 </div>
               </div>
 
-              <div className="subscribe-input">
-                <input className="email-input" type="text" placeholder="Your email"/>
-                <Fab
-                  variant="extended"
-                  size="large"
-                  color="secondary"
-                  aria-label="Buy"
-                  className="btn-action m-8"
-                >
-                  <Icon className="mr-16">flight_takeoff</Icon>
-                  Subscribe
-                </Fab>
-              </div>
+              <Fab
+                variant="extended"
+                size="medium"
+                color="primary"
+                aria-label="Download"
+                className=""
+                href="https://github.com/NodeFactoryIo/hactar-daemon/releases"
+                target="_blank"
+              >
+                <Icon className="mr-16">cloud_download</Icon>
+                Download
+              </Fab>
             </Grid>
             <Grid item md={6}>
               <div className="intro3__product">

@@ -1,14 +1,19 @@
 $white:               #ffffff;
 $black:               rgba(0, 0, 0, .87);
 
-$body-color:            rgba($black, .7);
-$heading-color:         $black;
-
-$primary:             #3f51b5;
-$secondary:           #ff9100;
+$primary:             #EECA1C;
+$secondary:           #6B7799;
 
 
 $brand:                 $primary;
 $brand-active:          darken($brand, 10);
 
 $topbar-mobile-width:   220px;
+
+$background: #1D2333;
+$background-light: #242B3D;
+$accented: #E1E6F5;
+$regular: #A8B2CC;
+
+$body-color:            $regular;
+$heading-color:         $white;

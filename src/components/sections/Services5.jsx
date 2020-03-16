@@ -44,7 +44,6 @@ class Service5 extends Component {
             value={value}
             onChange={this.handleChange}
             indicatorColor="primary"
-            textColor="primary"
             variant="standard"
             scrollButtons="auto"
           >

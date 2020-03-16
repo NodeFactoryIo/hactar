@@ -10,6 +10,8 @@ body {
   line-height: 1.5;
   letter-spacing: 0.3px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $background;
+  color: $accented;
 }
 
 .landing {
@@ -192,7 +194,6 @@ body {
 .header {
   position: fixed;
   width: 100%;
-  background: $white;
   top: 0;
   left: 0;
   right: 0;
@@ -227,13 +228,14 @@ body {
         a {
           display: flex;
           align-items: center;
-          color: $black;
+          color: $accented;
           padding: 8px 15px;
           font-weight: 700;
           border-radius: 4px;
           transition: all 0.3s ease-in;
+
           &:hover {
-            background: darken($white, 6);
+            color: $primary;
           }
         }
       }
@@ -421,8 +423,7 @@ body {
 }
 
 .section-intro3 {
-  background: $white;
-  color: $black;
+  color: $accented;
   .section-intro1__title {
     color: $brand;
   }
@@ -505,6 +506,10 @@ body {
 
 .section-service4 {
   transition: transform 400ms #{bezier()};
+
+  h3 {
+    color: $background;
+  }
 
   .service4__card {
     position: relative;

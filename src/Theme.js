@@ -1,12 +1,16 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import indigo from '@material-ui/core/colors/indigo';
-import orange from '@material-ui/core/colors/orange';
 import red from '@material-ui/core/colors/red';
 
 const Theme = createMuiTheme({
   palette: {
-    primary: indigo,
-    secondary: orange,
+    primary: {
+      main: '#EECA1C',
+      contrastText: '#2E3742',
+    },
+    secondary: {
+      main: '#1D2333',
+      contrastText: '#E1E6F5',
+    },
     error: red,
 
     contrastThreshold: 3,

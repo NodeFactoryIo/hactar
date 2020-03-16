@@ -9,8 +9,8 @@
   background: #000000;
 }
 .light-dark {
-  background: #212121;
-  color: #fff;
+  background: $background-light;
+  color: $regular;
 }
 .text-white {
   color: #fff;
@@ -19,7 +19,7 @@
   color: rgba(255, 255, 255, 0.54);
 }
 .text-muted {
-  color: rgba(0, 0, 0, 0.54);
+  color: $regular;
 }
 .text-gray {
   color: rgba(0, 0, 0, 0.74);

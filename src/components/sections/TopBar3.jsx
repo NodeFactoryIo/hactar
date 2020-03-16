@@ -45,7 +45,7 @@ class TopBar3 extends Component {
       <section
         className={classList({
           header: true,
-          "header-fixed": !this.state.isTop,
+          "header-fixed light-dark": !this.state.isTop,
           closed: this.state.isClosed
         })}
       >
@@ -89,19 +89,7 @@ class TopBar3 extends Component {
             */}
           </ul>
           <div className="m-auto" />
-          <Fab
-                  variant="extended"
-                  size="medium"
-                  color="secondary"
-                  aria-label="Download"
-                  className=""
-                  href="https://github.com/NodeFactoryIo/hactar-daemon/releases"
-                  target="_blank"
 
-          >
-            <Icon className="mr-16">cloud_download</Icon>
-            Download
-          </Fab>
           <IconButton
             className="header__toggle"
             onClick={() => {
