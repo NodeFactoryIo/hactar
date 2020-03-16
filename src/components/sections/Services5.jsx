@@ -8,22 +8,22 @@ class Service5 extends Component {
 
   featureList = [
     {
-      imageUrl: "./assets/images/screenshots/login.jpg",
-      title: "Clean & minimal login UI",
+      imageUrl: "./assets/images/screenshots/Login.png",
+      title: "1. Register",
       text:
-        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.\n\nLorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad, ipsum prompta ius eu. Sanctus appellantur vim ea. Dolorem delicata vis te, aperiam nostrum ut per."
+        "First, go to our Hactar app and register your account."
     },
     {
-      imageUrl: "./assets/images/screenshots/dashboard.jpg",
-      title: "Minimal & smart dashboard",
+      imageUrl: "./assets/images/screenshots/Github.png",
+      title: "2. Download & install",
       text:
-        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.\n\nLorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad, ipsum prompta ius eu. Sanctus appellantur vim ea. Dolorem delicata vis te, aperiam nostrum ut per."
+        "Download Hactar daemon application and install it on server along your miner node.\n\nUse same login credentials as you did in the previous step during registration."
     },
     {
-      imageUrl: "./assets/images/screenshots/calendar.jpg",
-      title: "Manage your tasks & project efficiently",
+      imageUrl: "./assets/images/screenshots/Dashboard.png",
+      title: "3. Enjoy",
       text:
-        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.\n\nLorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad, ipsum prompta ius eu. Sanctus appellantur vim ea. Dolorem delicata vis te, aperiam nostrum ut per."
+        "Leave your Hactar daemon app running and enjoy the incoming reports on Hactar app!"
     }
   ];
 
@@ -47,9 +47,9 @@ class Service5 extends Component {
             variant="standard"
             scrollButtons="auto"
           >
-            <Tab label="Login" />
-            <Tab label="Dashboard" />
-            <Tab label="Calendar" />
+            <Tab label="1. Register" />
+            <Tab label="2. Install Hactar" />
+            <Tab label="3. Enjoy" />
           </Tabs>
 
           <Grid
@@ -68,8 +68,9 @@ class Service5 extends Component {
                 <h3>{feature.title}</h3>
                 <p>{feature.text}</p>
 
-                <a className="text-brand" href="#details">
-                  View details 
+                <a className="text-brand" href="https://app.hactar.nodefactory.io"
+                   target="_blank" rel="noopener noreferrer">
+                  Hactar app
                   <Icon className="service5__link-icon">navigate_next</Icon>
                 </a>
               </div>

@@ -9,7 +9,7 @@ body {
   overflow-x: hidden !important;
   line-height: 1.5;
   letter-spacing: 0.3px;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Barlow, "Helvetica Neue", sans-serif;
   background-color: $background;
   color: $accented;
 }
@@ -712,6 +712,11 @@ body {
   h1, h2, h3, h4, h5, h6 {
     color: $white;
   }
+
+  a {
+    color: $primary;
+  }
+
   h4 {
     font-size: 1.25rem;
     margin: 0 0 24px;

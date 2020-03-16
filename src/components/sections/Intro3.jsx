@@ -12,21 +12,21 @@ class Intro3 extends Component {
           <Grid container spacing={24} justify="center">
             <Grid item md={6}>
               <h1 className="section-intro1__title">
-                Better Management; Less Expense
+                Analytics for your Filecoin miner node
               </h1>
               <div className="section-intro1__subtitle">
-                Not sure about Pro? Try trial first!
+                Optimize your performance
               </div>
 
               <div className="section-intro1__list">
                 <div className="section-intro1__list__item text-muted">
-                  <Icon color="secondary">check</Icon> Unlimited Projects.
+                  <Icon color="inherit">check</Icon> Easy insights into node status.
                 </div>
                 <div className="section-intro1__list__item text-muted">
-                  <Icon color="secondary">check</Icon> Unlimited Team Members.
+                  <Icon color="inherit">check</Icon> Multiple nodes support.
                 </div>
                 <div className="section-intro1__list__item text-muted">
-                  <Icon color="secondary">check</Icon> Unlimited Disk Space.
+                  <Icon color="inherit">check</Icon> Offline node notifier.
                 </div>
               </div>
 
