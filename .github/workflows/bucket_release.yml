@@ -34,3 +34,14 @@ jobs:
       run: echo "The CID was ${{ steps.push.outputs.cid }}"
     - name: Get the Bucket URL
       run: echo "The Bucket URL is ${{ steps.push.outputs.url }}"
+
+    - name: Update DNSLink
+      env:
+        CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
+        CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        RECORD_DOMAIN: 'hactar.app'
+        RECORD_NAME: '_dnslink.cloud'
+      id: dnslink
+      uses: textileio/cloudflare-update-dnslink@master
+      with:
+        cid: ${{ steps.push.outputs.cid }}
