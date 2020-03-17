@@ -40,7 +40,7 @@ jobs:
         CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
         CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
         RECORD_DOMAIN: 'hactar.app'
-        RECORD_NAME: '_dnslink.cloud'
+        RECORD_NAME: '_dnslink.www'
       id: dnslink
       uses: textileio/cloudflare-update-dnslink@master
       with:
