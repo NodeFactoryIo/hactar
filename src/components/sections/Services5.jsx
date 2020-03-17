@@ -68,7 +68,7 @@ class Service5 extends Component {
                 <h3>{feature.title}</h3>
                 <p>{feature.text}</p>
 
-                <a className="text-brand" href="https://app.hactar.nodefactory.io"
+                <a className="text-brand" href="https://analytics.hactar.app"
                    target="_blank" rel="noopener noreferrer">
                   Hactar app
                   <Icon className="service5__link-icon">navigate_next</Icon>
