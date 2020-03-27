@@ -19,7 +19,7 @@ class Service5 extends Component {
       text:
         "Download Hactar daemon application and install it on server along your miner node.\n\n" +
         "Example:\n" +
-        "> wget https://github.com/NodeFactoryIo/hactar-daemon/releases/download/v1.0.0-rc1/hactar-linux-64bit\n" +
+        "> wget https://github.com/NodeFactoryIo/hactar-daemon/releases/download/v1.0.0/hactar-linux-64bit\n" +
         "> chmod +x hactar-linux-64bit\n" +
         "> ./hactar-linux-64bit start\n\n" +
         "Use same login credentials as you did in the previous step during registration."
