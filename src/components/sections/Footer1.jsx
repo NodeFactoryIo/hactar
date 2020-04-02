@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Grid, Button, Icon } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 class Footer1 extends Component {
   state = {};

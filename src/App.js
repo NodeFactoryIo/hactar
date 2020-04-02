@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/sass/app.scss";
-import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 
 import Theme from "./Theme";

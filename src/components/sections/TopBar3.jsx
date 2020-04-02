@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { debounce, classList } from "../../Utils";
 import Icon from "@material-ui/core/Icon";
-import Fab from "@material-ui/core/Fab";
 import IconButton from "@material-ui/core/IconButton";
 import ScrollTo from "../common/ScrollTo";
 
