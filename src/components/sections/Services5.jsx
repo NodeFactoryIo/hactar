@@ -1,44 +1,60 @@
 import React, { Component } from "react";
 import { Tabs, Tab, Grid, Icon } from "@material-ui/core";
 
+const featureListDefault = [
+  {
+    imageUrl: "./assets/images/screenshots/Login.png",
+    title: "1. Register",
+    text:
+      "First, go to our Hactar app and register your account."
+  },
+  {
+    imageUrl: "./assets/images/screenshots/Github.png",
+    title: "2. Download & install",
+    text:
+    "Download Hactar daemon application and install it on server along your miner node. " +
+    "Use same login credentials as you did in the previous step during registration.\n\n" +
+    "Example:\n",
+    code:
+      "> wget https://github.com/NodeFactoryIo/hactar-daemon/releases/download/v1.0.0/hactar-linux-64bit\n" +
+        "> chmod +x hactar-linux-64bit\n" +
+      "> ./hactar-linux-64bit start\n"
+  },
+  {
+    imageUrl: "./assets/images/screenshots/Dashboard.png",
+    title: "3. Enjoy",
+    text:
+      "Leave your Hactar daemon app running and enjoy the incoming reports on Hactar app!"
+  }
+];
+
 class Service5 extends Component {
   state = {
-    value: 0
+    value: 0,
+    featureList: featureListDefault,
   };
 
-  featureList = [
-    {
-      imageUrl: "./assets/images/screenshots/Login.png",
-      title: "1. Register",
-      text:
-        "First, go to our Hactar app and register your account."
-    },
-    {
-      imageUrl: "./assets/images/screenshots/Github.png",
-      title: "2. Download & install",
-      text:
-        "Download Hactar daemon application and install it on server along your miner node.\n\n" +
-        "Example:\n" +
-        "> wget https://github.com/NodeFactoryIo/hactar-daemon/releases/download/v1.0.0/hactar-linux-64bit\n" +
-        "> chmod +x hactar-linux-64bit\n" +
-        "> ./hactar-linux-64bit start\n\n" +
-        "Use same login credentials as you did in the previous step during registration."
-    },
-    {
-      imageUrl: "./assets/images/screenshots/Dashboard.png",
-      title: "3. Enjoy",
-      text:
-        "Leave your Hactar daemon app running and enjoy the incoming reports on Hactar app!"
-    }
-  ];
 
   handleChange = (event, value) => {
     this.setState({ value });
   };
 
+  componentWillMount() {
+    fetch("https://api.github.com/repos/nodefactoryio/hactar-daemon/releases")
+      .then((response) => response.json())
+      .then(response => {
+        const tagName = response[0]["tag_name"];
+        const updatedList = [...this.state.featureList];
+        updatedList[1].code = updatedList[1].code.replace("v1.0.0", tagName);
+        this.setState({ featureList: updatedList} );
+      })
+  }
+
   render() {
-    const { value } = this.state;
-    let feature = this.featureList[value];
+    const { value, featureList } = this.state;
+    let feature = featureList[value];
+
+    console.log(featureList);
 
     return (
       <div className="section section-service5 light-gray" id="service5">
@@ -72,6 +88,7 @@ class Service5 extends Component {
               <div className="service5__details">
                 <h3>{feature.title}</h3>
                 <p>{feature.text}</p>
+                <p>{feature.code}</p>
 
                 <a className="text-brand" href="https://analytics.hactar.app"
                    target="_blank" rel="noopener noreferrer">
